@@ -1,31 +1,45 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: ROCKNITE-STUDIO
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Site principal
+    url: https://rocknite-studio.com
+  - name: Compte
+    url: https://account.rocknite-studio.com
+  - name: API
+    url: https://api.rocknite-studio.com
+    expectedStatusCodes: [200, 401, 403, 404]
+  - name: CDN
+    url: https://cdn.rocknite-studio.com
+    expectedStatusCodes: [200, 403, 404]
+  - name: Online Services
+    url: https://online-services.rocknite-studio.com
+    expectedStatusCodes: [200, 401, 403, 404]
+  - name: Nodes
+    url: https://nodes.rocknite-studio.com
+    expectedStatusCodes: [200, 401, 403, 404]
+  - name: ROCKNITE ONLINE
+    url: https://online.rocknite-studio.com
+  - name: Panel
+    url: https://panel.rocknite-studio.com
+  - name: Wiki
+    url: https://wiki.rocknite-studio.com
+  - name: Leaderboard
+    url: https://leaderboard.rocknite-studio.com
+  - name: Minecraft (mc)
+    url: https://mc.rocknite-studio.com
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.rocknite-studio.com
+  name: ROCKNITE-STUDIO Status
+  introTitle: "**ROCKNITE-STUDIO** — état des services"
+  introMessage: Statut en temps réel de nos services, vérifié toutes les 5 minutes.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Discord
+      href: https://discord.rocknite-studio.com
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Optionnel : alertes Discord
+# notifications:
+#   - type: discord
