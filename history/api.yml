@@ -1,7 +1,7 @@
-url: https://api.rocknite-studio.com
+url: https://api.rocknite-studio.com/status
 status: up
-code: 404
-responseTime: 575
-lastUpdated: 2026-10-02T20:24:17.477Z
+code: 200
+responseTime: 593
+lastUpdated: 2026-10-02T20:43:15.733Z
 startTime: 2026-10-02T20:24:16.901Z
 generator: Upptime <https://github.com/upptime/upptime>
