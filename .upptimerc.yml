@@ -2,22 +2,11 @@ owner: ROCKNITE-STUDIO
 repo: status
 
 sites:
+  # --- Sites / apps (check simple) ---
   - name: Site principal
     url: https://rocknite-studio.com
   - name: Compte
     url: https://account.rocknite-studio.com
-  - name: API
-    url: https://api.rocknite-studio.com
-    expectedStatusCodes: [200, 401, 403, 404]
-  - name: CDN
-    url: https://cdn.rocknite-studio.com
-    expectedStatusCodes: [200, 403, 404]
-  - name: Online Services
-    url: https://online-services.rocknite-studio.com
-    expectedStatusCodes: [200, 401, 403, 404]
-  - name: Nodes
-    url: https://nodes.rocknite-studio.com
-    expectedStatusCodes: [200, 401, 403, 404]
   - name: ROCKNITE ONLINE
     url: https://online.rocknite-studio.com
   - name: Panel
@@ -26,20 +15,44 @@ sites:
     url: https://wiki.rocknite-studio.com
   - name: Leaderboard
     url: https://leaderboard.rocknite-studio.com
+  - name: Nodes
+    url: https://nodes.rocknite-studio.com
+    expectedStatusCodes: [200, 401, 403, 404]
   - name: Minecraft (mc)
     url: https://mc.rocknite-studio.com
+
+  # --- CDN ---
+  - name: CDN
+    url: https://cdn.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"status":"ok"'
+
+  # --- API : global + détail par service ---
+  - name: API
+    url: https://api.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"status":"ok"'
+  - name: API - Auth
+    url: https://api.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"auth":"running"'
+  - name: API - Catalog
+    url: https://api.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"catalog":"running"'
+  - name: API - Wallet
+    url: https://api.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"wallet":"running"'
+
+  # --- Online services ---
+  - name: Online Services
+    url: https://online-services.rocknite-studio.com/status
+    __dangerous__body_down_if_text_missing: '"online":"running"'
+    __dangerous__body_degraded: '"status":"degraded"'
 
 status-website:
   cname: status.rocknite-studio.com
   name: ROCKNITE-STUDIO Status
-  introTitle: "**ROCKNITE-STUDIO** — état des services"
-  introMessage: Statut en temps réel de nos services, vérifié toutes les 5 minutes.
+  introTitle: "**ROCKNITE-STUDIO** - état des services"
+  introMessage: Statut en temps réel, vérifié toutes les 5 minutes.
   navbar:
     - title: Status
       href: /
     - title: Discord
-      href: https://discord.rocknite-studio.com
-
-# Optionnel : alertes Discord
-# notifications:
-#   - type: discord
+      href: https://discord.rocknite-studio.com/
