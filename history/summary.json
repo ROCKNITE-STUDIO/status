@@ -185,18 +185,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/online-services.rocknite-studio.com.ico",
     "slug": "rocknite-online-services",
     "status": "degraded",
-    "uptime": "44.75%",
-    "uptimeDay": "44.75%",
-    "uptimeWeek": "44.75%",
-    "uptimeMonth": "44.75%",
-    "uptimeYear": "44.75%",
+    "uptime": "7.31%",
+    "uptimeDay": "7.31%",
+    "uptimeWeek": "7.31%",
+    "uptimeMonth": "7.31%",
+    "uptimeYear": "7.31%",
     "time": 499,
     "timeDay": 499,
     "timeWeek": 499,
     "timeMonth": 499,
     "timeYear": 499,
     "dailyMinutesDown": {
-      "2026-10-02": 0
+      "2026-10-02": 3
     }
   },
   {
