@@ -60,3 +60,7 @@ status-website:
       href: /
     - title: Discord
       href: https://discord.rocknite-studio.com/
+
+notifications:
+  - type: discord
+    url: ${{ secrets.DISCORD_WEBHOOK_URL }}
